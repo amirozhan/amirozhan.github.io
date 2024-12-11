@@ -62,7 +62,7 @@ I am a graduate student in the MSc Physiology - NeuroAI program at Mila/McGill U
 
 ## Leadership & Teaching
 
-- **President, PharmaHacks McGill**: Organized PharmaHacks 2023 at Mila, with over 200 participants and $18,000 in funding.
+- **President, PharmaHacks McGill**: Organized PharmaHacks 2023 at Mila, with over 200 participants and +$20,000 in funding.
 - **Private Tutor**: Taught biology, chemistry, physics, and calculus to undergraduates.
 ---
 
