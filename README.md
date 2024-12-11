@@ -26,7 +26,6 @@ I am a graduate student in the MSc Physiology - NeuroAI program at Mila/McGill U
 ## Notable Projects & Publications
 
 ### **Publications**
-- **Dehghani A., et al. (2024)**: *Credit-based self organizing maps: training deep topographic networks with minimal performance degradation*. [Under review at ICLR]
 - **Dehghani A., Bashivan P. (2023)**: Credit-based self-organization yields cortex-like topography in deep convolutional neural networks. [Cosyne Abstracts 2023](https://doi.org/10.57736/cc30-1b90)
 - **Dehghani A., Bakhtiari S. (2024)**: Geometry of representations in artificial neural networks predicts visual learning specificity. [Healthy Brains Healthy Lives Symposium](https://mjm.mcgill.ca/article/view/1140/880)
 
