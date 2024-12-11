@@ -38,7 +38,6 @@ I am a graduate student in the MSc Physiology - NeuroAI program at Mila/McGill U
 ### **Projects**
 - **Hierarchical Topographical Deep ANNs**: Developed and evaluated deep learning models inspired by lateral connectivity constraints in the visual cortex.
 - **Visual Perceptual Learning**: Designed ANN-based training tasks to model human perceptual learning.
-- **Brain-Computer Interfaces**: Contributed to predictive algorithms in the McGill Neurotechnology Group.
 
 ---
 
