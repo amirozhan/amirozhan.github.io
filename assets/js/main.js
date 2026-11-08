@@ -54,7 +54,7 @@ const PROJECTS = [
     org: "Mila – Quebec AI Institute, Applied AI Research Intern",
     period: "2026",
     desc: "Designed and deployed deep-learning architectures for mineral resource identification. Worked in a multidisciplinary team with production-grade code review.",
-    chips: ["+20% AUPRC", "Deep learning", "Data pipelines"],
+    chips: ["Self-Supervised Learning", "Data pipelines"],
     links: []
   },
   {
@@ -63,7 +63,7 @@ const PROJECTS = [
     org: "AIVALON, Data Scientist",
     period: "2024–25",
     desc: "Built models that detect coronary artery disease from heart rate, EKG and BVP signals using engineered signal features.",
-    chips: ["91% AUROC", "Signal processing", "Full-stack"],
+    chips: ["Signal processing", "Full-stack"],
     links: []
   },
   {
