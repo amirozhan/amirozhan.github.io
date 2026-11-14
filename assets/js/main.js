@@ -73,7 +73,10 @@ const PROJECTS = [
     period: "2021–23",
     desc: "Led McGill’s pharma and biotech hackathon, bringing in early sponsors such as Pfizer Canada. As president, ran the 2023 edition at Mila with 200+ participants, grew the team from 3 to 15+, and secured $18K+ in sponsorship.",
     chips: ["200+ participants", "$18K+ raised", "Team of 15+"],
-    links: []
+    links: [
+      { label: "Website", href: "https://pharmahacks.ca/" },
+      { label: "Watch our talk", href: "https://youtu.be/i-PkXaIISjc" }
+    ]
   },
   {
     id: "pharmahacks-ml", cat: "c", x: 290, y: 322, label: "Hackathon ML tracks",
