@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="38 31 627 627" width="627" height="627">
   <defs>
     <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="80" y1="60" x2="620" y2="640">
-      <stop offset="0" stop-color="#FCE9A8"/>
-      <stop offset="0.22" stop-color="#E4BC52"/>
-      <stop offset="0.45" stop-color="#B9872C"/>
-      <stop offset="0.62" stop-color="#F0CF72"/>
-      <stop offset="0.82" stop-color="#C99A3A"/>
-      <stop offset="1" stop-color="#A47320"/>
+      <stop offset="0" stop-color="#FFF3C4"/>
+      <stop offset="0.14" stop-color="#F6D57E"/>
+      <stop offset="0.38" stop-color="#9A6619"/>
+      <stop offset="0.6" stop-color="#FFF0B5"/>
+      <stop offset="0.85" stop-color="#A06A1E"/>
+      <stop offset="1" stop-color="#CC9538"/>
     </linearGradient>
     <clipPath id="in"><circle cx="351.5" cy="344.5" r="305"/></clipPath>
   </defs>
