@@ -1,0 +1,19 @@
+  <header class="site-header is-solid">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="26" height="26">
+        <span>Amir Ozhan Dehghani</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ '/#work' | relative_url }}">Work</a>
+        <a href="{{ '/#news' | relative_url }}">News</a>
+        <a href="{{ '/blog/' | relative_url }}" aria-current="page">Blog</a>
+        <a href="{{ '/#experience' | relative_url }}">Experience</a>
+        <a href="{{ '/#publications' | relative_url }}">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>

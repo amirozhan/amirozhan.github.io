@@ -250,8 +250,9 @@ const KIND = { r: "Research", a: "Applied project", c: "Community" };
 /* Header: transparent over the logo, solid once you scroll or open the menu */
 const header = document.querySelector(".site-header");
 let menuOpen = false;
+const hasHero = !!document.querySelector(".hero");
 function updateHeader() {
-  if (header) header.classList.toggle("is-solid", menuOpen || window.scrollY > window.innerHeight * 0.55);
+  if (header) header.classList.toggle("is-solid", menuOpen || !hasHero || window.scrollY > window.innerHeight * 0.55);
 }
 window.addEventListener("scroll", updateHeader, { passive: true });
 window.addEventListener("resize", updateHeader);
@@ -284,6 +285,41 @@ updateHeader();
     void stage.getBoundingClientRect(); // flush styles so the animations restart
     stage.classList.remove("reset");
   });
+})();
+
+/* Blog: show the three newest posts on the homepage (blog/posts.json is built by GitHub Pages) */
+(function () {
+  const list = document.getElementById("latest-posts");
+  if (!list || !window.fetch) return;
+  fetch(list.dataset.src)
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((posts) => {
+      if (!Array.isArray(posts) || !posts.length) return;
+      list.replaceChildren();
+      posts.slice(0, 3).forEach((p) => {
+        const li = document.createElement("li");
+        li.className = "row";
+        const time = document.createElement("time");
+        time.dateTime = p.date;
+        time.textContent = new Date(p.date + "T12:00:00").toLocaleDateString("en-US", { month: "short", year: "numeric" });
+        const body = document.createElement("div");
+        body.className = "row-body";
+        const h3 = document.createElement("h3");
+        const a = document.createElement("a");
+        a.href = p.url;
+        a.textContent = p.title;
+        h3.appendChild(a);
+        body.appendChild(h3);
+        if (p.summary) {
+          const sum = document.createElement("p");
+          sum.textContent = p.summary;
+          body.appendChild(sum);
+        }
+        li.append(time, body);
+        list.appendChild(li);
+      });
+    })
+    .catch(() => { /* keep the placeholder (e.g. when the file is opened locally) */ });
 })();
 
 /* Start the brain's entrance and the section fade-ins when they scroll into view */

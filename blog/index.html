@@ -1,0 +1,45 @@
+---
+title: Blog · Amir Ozhan Dehghani
+description: Writing by Amir Ozhan Dehghani on research, neural networks and building things.
+---
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html title=page.title description=page.description %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+{% include site-header.html %}
+  <main id="main" class="page">
+    <div class="wrap">
+      <header class="page-head">
+        <p class="eyebrow">Blog</p>
+        <h1>Writing</h1>
+        <p>Notes on research, neural networks and building things.</p>
+      </header>
+
+      <ol class="rows post-list">
+        {%- for post in site.posts %}
+        <li class="row">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+          <div class="row-body">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {%- assign summary = post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 200 %}
+            <p>{{ summary }}</p>
+            {%- if post.tags.size > 0 %}
+            <div class="chips">{% for tag in post.tags %}<span class="chip">{{ tag }}</span>{% endfor %}</div>
+            {%- endif %}
+          </div>
+        </li>
+        {%- else %}
+        <li class="row row-empty">
+          <span class="when">Soon</span>
+          <div class="row-body"><p>The first posts are on their way.</p></div>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </main>
+{% include site-footer.html %}
+</body>
+</html>

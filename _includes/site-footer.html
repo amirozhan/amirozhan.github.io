@@ -1,0 +1,16 @@
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-inner">
+      <img class="footer-mark" src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="56" height="56">
+      <p class="footer-lede">Let's connect!</p>
+      <div class="footer-bottom">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/amir-ozhan-dehghani/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/amirozhan" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://x.com/great_caster" target="_blank" rel="noopener">X</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+        <p>© <span id="year">{{ site.time | date: '%Y' }}</span> Amir Ozhan Dehghani</p>
+      </div>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

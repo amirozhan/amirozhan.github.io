@@ -1,0 +1,29 @@
+# Jekyll settings. GitHub Pages builds the blog from these.
+# The homepage (index.html) has no front matter, so Jekyll copies it as-is.
+title: Amir Ozhan Dehghani
+description: Brain-inspired neural networks and applied machine learning. MSc at Mila / McGill, Montréal.
+url: https://amirozhan.github.io
+baseurl: ""
+author: Amir Ozhan Dehghani
+
+# Posts live in _posts/ as YYYY-MM-DD-slug.md and are published at /blog/YYYY/slug/
+permalink: /blog/:year/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed   # RSS/Atom feed at /feed.xml
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md
