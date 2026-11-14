@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="38 31 627 627" width="627" height="627">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="80" y1="60" x2="620" y2="640">
+      <stop offset="0" stop-color="#FCE9A8"/>
+      <stop offset="0.22" stop-color="#E4BC52"/>
+      <stop offset="0.45" stop-color="#B9872C"/>
+      <stop offset="0.62" stop-color="#F0CF72"/>
+      <stop offset="0.82" stop-color="#C99A3A"/>
+      <stop offset="1" stop-color="#A47320"/>
+    </linearGradient>
+    <clipPath id="in"><circle cx="351.5" cy="344.5" r="305"/></clipPath>
+  </defs>
+  <g stroke="url(#gold)" fill="none" stroke-linecap="butt">
+    <g clip-path="url(#in)" stroke-width="14">
+      <line x1="169" y1="113" x2="560" y2="113"/>
+      <line x1="548.5" y1="113" x2="157" y2="579"/>
+      <line x1="145" y1="579" x2="530.5" y2="579"/>
+      <line x1="360" y1="113" x2="360" y2="579" stroke-width="12"/>
+    </g>
+    <circle cx="351.5" cy="344.5" r="305" stroke-width="12"/>
+  </g>
+</svg>

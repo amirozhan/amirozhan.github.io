@@ -247,23 +247,64 @@ const KIND = { r: "Research", a: "Applied project", c: "Community" };
   }
 })();
 
+/* Header: transparent over the logo, solid once you scroll or open the menu */
+const header = document.querySelector(".site-header");
+let menuOpen = false;
+function updateHeader() {
+  if (header) header.classList.toggle("is-solid", menuOpen || window.scrollY > window.innerHeight * 0.55);
+}
+window.addEventListener("scroll", updateHeader, { passive: true });
+window.addEventListener("resize", updateHeader);
+updateHeader();
+
 /* Mobile menu */
 (function () {
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.getElementById("nav-links");
   if (!toggle || !menu) return;
-  toggle.addEventListener("click", () => {
-    const open = menu.classList.toggle("is-open");
+  function setOpen(open) {
+    menuOpen = open;
+    menu.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  });
+    updateHeader();
+  }
+  toggle.addEventListener("click", () => setOpen(!menu.classList.contains("is-open")));
   menu.addEventListener("click", (e) => {
-    if (e.target.closest("a")) {
-      menu.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open menu");
-    }
+    if (e.target.closest("a")) setOpen(false);
   });
+})();
+
+/* Logo: click to replay the drawing */
+(function () {
+  const stage = document.querySelector(".logo-stage");
+  if (!stage) return;
+  stage.addEventListener("click", () => {
+    stage.classList.add("reset");
+    void stage.getBoundingClientRect(); // flush styles so the animations restart
+    stage.classList.remove("reset");
+  });
+})();
+
+/* Start the brain's entrance and the section fade-ins when they scroll into view */
+(function () {
+  const brain = document.getElementById("brain");
+  document.querySelectorAll(".section .rows, .subgroup").forEach((e) => e.classList.add("reveal"));
+  const targets = Array.from(document.querySelectorAll(".reveal"));
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((t) => t.classList.add("is-in"));
+    if (brain) brain.classList.add("in-view");
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add(en.target === brain ? "in-view" : "is-in");
+      io.unobserve(en.target);
+    });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.05 });
+  targets.forEach((t) => io.observe(t));
+  if (brain) io.observe(brain);
 })();
 
 const yearEl = document.getElementById("year");

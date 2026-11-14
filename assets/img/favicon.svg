@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 11 667 667">
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="80" y1="60" x2="620" y2="640">
+      <stop offset="0" stop-color="#FCE9A8"/>
+      <stop offset="0.35" stop-color="#E4BC52"/>
+      <stop offset="0.62" stop-color="#F0CF72"/>
+      <stop offset="1" stop-color="#C99A3A"/>
+    </linearGradient>
+    <clipPath id="in"><circle cx="351.5" cy="344.5" r="300"/></clipPath>
+  </defs>
+  <circle cx="351.5" cy="344.5" r="333" fill="#0B0A08"/>
+  <g stroke="url(#gold)" fill="none">
+    <g clip-path="url(#in)" stroke-width="34">
+      <line x1="140" y1="122" x2="580" y2="122"/>
+      <line x1="548.5" y1="122" x2="157" y2="570"/>
+      <line x1="120" y1="570" x2="560" y2="570"/>
+    </g>
+    <line x1="360" y1="122" x2="360" y2="570" stroke-width="30"/>
+    <circle cx="351.5" cy="344.5" r="300" stroke-width="30"/>
+  </g>
+</svg>

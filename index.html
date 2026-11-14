@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amir Ozhan Dehghani — computational neuroscience &amp; machine learning</title>
   <meta name="description" content="Amir Ozhan Dehghani is an MSc student in computational neuroscience at Mila and McGill University, building brain-inspired neural networks and applied machine learning.">
-  <meta name="theme-color" content="#0A090D">
+  <meta name="theme-color" content="#0B0A08">
   <link rel="canonical" href="https://amirozhan.github.io/">
 
   <meta property="og:type" content="website">
@@ -18,8 +18,9 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400&amp;family=Sora:wght@500;600&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <script>document.documentElement.classList.add("js");</script>
 
   <script type="application/ld+json">
   {
@@ -49,8 +50,8 @@
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main">
       <a class="brand" href="#top">
-        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="1.6"><circle cx="5" cy="7" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l9-2M6.2 8.6l4.6 7.6M17.2 6.8l-4.2 9"/></svg>
-        Amir Ozhan Dehghani
+        <img src="assets/img/logo.svg" alt="" width="26" height="26">
+        <span>Amir Ozhan Dehghani</span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -66,33 +67,93 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO: About first, brain explorer beside it ============ -->
-    <section class="hero wrap" id="top" aria-label="About">
-      <div class="intro">
-        <div class="identity">
-          <div class="avatar">
-            <span aria-hidden="true">AD</span>
-            <!-- Add your photo at assets/img/profile.jpg (square, at least 400×400). Until then your initials show. -->
-            <img src="assets/img/profile.jpg" alt="Portrait of Amir Ozhan Dehghani" width="96" height="96" onerror="this.remove()">
-          </div>
-          <div>
-            <h1>Amir Ozhan Dehghani</h1>
-            <p class="role">Montréal, QC</p>
-          </div>
-        </div>
+    <!-- ============ HERO: the monogram, drawn stroke by stroke ============
+         Order: circle, then the two horizontal lines, then the diagonal,
+         then the vertical stem drops in like a hammer and the mark shines.
+         Click the logo to replay. Timings live in style.css (search "Logo timeline"). -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <button class="logo-stage" type="button" aria-label="Replay logo animation">
+          <svg class="dial" viewBox="-400 -400 800 800" aria-hidden="true" focusable="false">
+            <circle r="392" pathLength="120" class="dial-minor"/>
+            <circle r="392" pathLength="12" class="dial-major"/>
+            <circle r="372" class="dial-ring"/>
+          </svg>
+          <svg class="logo" viewBox="38 31 627 627" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="lg-gold" gradientUnits="userSpaceOnUse" x1="80" y1="60" x2="620" y2="640">
+                <stop offset="0" stop-color="#FCE9A8"/>
+                <stop offset="0.22" stop-color="#E4BC52"/>
+                <stop offset="0.45" stop-color="#B9872C"/>
+                <stop offset="0.62" stop-color="#F0CF72"/>
+                <stop offset="0.82" stop-color="#C99A3A"/>
+                <stop offset="1" stop-color="#A47320"/>
+              </linearGradient>
+              <linearGradient id="lg-sheen" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FFF8E1" stop-opacity="0"/>
+                <stop offset="0.5" stop-color="#FFFDF5" stop-opacity="1"/>
+                <stop offset="1" stop-color="#FFF8E1" stop-opacity="0"/>
+              </linearGradient>
+              <clipPath id="lg-clip"><circle cx="351.5" cy="344.5" r="305"/></clipPath>
+              <mask id="lg-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="720">
+                <g stroke="#fff" fill="none">
+                  <g clip-path="url(#lg-clip)" stroke-width="14">
+                    <path d="M169 113H560"/><path d="M530.5 579H145"/><path d="M548.5 113L157 579"/>
+                  </g>
+                  <path d="M360 113V579" stroke-width="12"/>
+                  <circle cx="351.5" cy="344.5" r="305" stroke-width="12"/>
+                </g>
+              </mask>
+            </defs>
+            <g class="lg-mark">
+              <circle class="lg-wave" cx="351.5" cy="344.5" r="305" fill="none" stroke="url(#lg-gold)" stroke-width="4"/>
+              <g stroke="url(#lg-gold)" fill="none">
+                <path class="lg-ring" pathLength="1" stroke-width="12" d="M351.5 39.5A305 305 0 1 1 351.5 649.5A305 305 0 1 1 351.5 39.5"/>
+                <g clip-path="url(#lg-clip)" stroke-width="14">
+                  <path class="lg-top" pathLength="1" d="M169 113H560"/>
+                  <path class="lg-bottom" pathLength="1" d="M530.5 579H145"/>
+                  <path class="lg-diag" pathLength="1" d="M548.5 113L157 579"/>
+                </g>
+                <path class="lg-stem" stroke-width="12" d="M360 113V579"/>
+              </g>
+              <g class="lg-sparks" stroke="#FCE9A8" stroke-width="4" stroke-linecap="round">
+                <g class="lg-burst"><path d="M360 91V71M360 135V155M338 113H316M382 113H404M344 97L330 83M376 97L390 83M344 129L330 143M376 129L390 143"/></g>
+                <g class="lg-burst"><path d="M360 557V537M360 601V621M338 579H316M382 579H404M344 563L330 549M376 563L390 549M344 595L330 609M376 595L390 609"/></g>
+              </g>
+              <g mask="url(#lg-mask)">
+                <g transform="rotate(24 351.5 344.5)">
+                  <rect class="lg-sheen" x="-60" y="-200" width="150" height="1100" fill="url(#lg-sheen)"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
 
-        <div class="bio">
-          <p>I’m an MSc student at <strong>Mila</strong> and <strong>McGill University</strong>.</p>
-        </div>
-
-        <div class="social">
-          <a href="https://www.linkedin.com/in/amir-ozhan-dehghani/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/amirozhan" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://x.com/great_caster" target="_blank" rel="noopener">X</a>
+        <div class="hero-text">
+          <h1 class="hero-name">Amir Ozhan Dehghani</h1>
+          <p class="hero-tag">Building brain-inspired neural networks and applied machine learning.</p>
+          <p class="hero-meta">MSc student at Mila &amp; McGill University <span aria-hidden="true">·</span> Montréal, QC</p>
+          <div class="social hero-social">
+            <a href="https://www.linkedin.com/in/amir-ozhan-dehghani/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/amirozhan" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://x.com/great_caster" target="_blank" rel="noopener">X</a>
+          </div>
         </div>
       </div>
+      <a class="scroll-cue" href="#work"><span>Explore the work</span><i aria-hidden="true"></i></a>
+    </section>
 
-      <div class="explorer" id="work">
+    <!-- ============ WORK: the brain explorer ============ -->
+    <section class="section work" id="work">
+      <div class="wrap">
+        <div class="section-head section-head-wide reveal">
+          <p class="eyebrow">01 · Work</p>
+          <h2>A map of my work</h2>
+          <p>Each node is a project, placed in one of three clusters: research, applied projects and community.</p>
+        </div>
+      <div class="explorer">
+        <div class="brain-col">
         <div class="brain" id="brain">
           <svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
             <defs>
@@ -130,28 +191,32 @@
         </div>
 
         <div class="project-list" id="project-list" aria-label="Projects"></div>
+        </div>
 
         <article class="card" id="project-card" aria-live="polite">
           <div class="card-intro">
-            <h2>Explore my work</h2>
-            <p>Each glowing node in the brain is a project, grouped into three clusters: research, applied projects and community. Pick one to see what I did and what came of it.</p>
+            <p class="eyebrow">Explorer</p>
+            <h2>Pick a node</h2>
+            <p>Select any glowing point on the brain to see what I did and what came of it.</p>
           </div>
         </article>
+      </div>
       </div>
     </section>
 
     <!-- ============ NEWS — add new items at the top of the list ============ -->
     <section class="section" id="news">
       <div class="wrap section-grid">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 · News</p>
           <h2>News</h2>
           <p>Papers, roles and milestones, newest first.</p>
         </div>
-        <ol class="rows news">
+        <ol class="rows news reveal">
           <li class="row">
             <!-- TODO: add the month and a link to the paper -->
             <time datetime="2026">2026</time>
-            <div class="row-body"><p>Excited to have my first public talk at Neurolingo</em>.</p></div>
+            <div class="row-body"><p>Excited to have my first public talk at Neurolingo.</p></div>
           </li>
           <li class="row">
             <time datetime="2026-05">May 2026</time>
@@ -180,7 +245,8 @@
     <!-- ============ EXPERIENCE ============ -->
     <section class="section" id="experience">
       <div class="wrap section-grid">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 · Experience</p>
           <h2>Experience</h2>
         </div>
         <div>
@@ -214,7 +280,7 @@
               <div class="row-body">
                 <h3>Undergraduate Researcher</h3>
                 <p class="org">McGill University</p>
-                <p>Developed topographic deep networks and compared them with neurphysiological data.</p>
+                <p>Developed topographic deep networks and compared them with neurophysiological data.</p>
               </div>
             </li>
           </ol>
@@ -224,7 +290,7 @@
             <ul class="rows">
               <li class="row">
                 <span class="when">2021–25</span>
-                <div class="row-body"><p><strong>PharmaHacks</strong>, President, VP Machine Learning and VP Sponsorship. Grew the team from 15+ memebers, ran the 2022,2023,2025 hackathons at Mila with 200+ participants, and secured $18K+ in sponsorship.</p></div>
+                <div class="row-body"><p><strong>PharmaHacks</strong>, President, VP Machine Learning and VP Sponsorship. Grew the team from 15+ members, ran the 2022,2023,2025 hackathons at Mila with 200+ participants, and secured $18K+ in sponsorship.</p></div>
               </li>
             </ul>
           </div>
@@ -249,7 +315,8 @@
     <!-- ============ PUBLICATIONS ============ -->
     <section class="section" id="publications">
       <div class="wrap section-grid">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 · Publications</p>
           <h2>Publications</h2>
         </div>
         <ol class="rows">
@@ -302,7 +369,8 @@
     <!-- ============ AWARDS ============ -->
     <section class="section" id="awards">
       <div class="wrap section-grid">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 · Awards</p>
           <h2>Awards</h2>
         </div>
         <ul class="rows">
@@ -320,6 +388,7 @@
   <!-- ============ CONTACT ============ -->
   <footer class="site-footer" id="contact">
     <div class="wrap footer-inner">
+      <img class="footer-mark" src="assets/img/logo.svg" alt="" width="56" height="56">
       <p class="footer-lede">Let's connect!</p>
       <div class="footer-bottom">
         <div class="social">
@@ -332,6 +401,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=5" defer></script>
+  <script src="assets/js/main.js?v=6" defer></script>
 </body>
 </html>
